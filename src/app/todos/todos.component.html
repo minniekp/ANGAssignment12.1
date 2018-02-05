@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+      <section class="content">
+          <div class="col-md-8 col-md-offset-2">
+              <h1 style="text-align: center;">List of Todos</h1>
+              <hr/>
+              <div class="panel panel-default">
+                  <input type="text" name="search" class="form-control" placeholder="Search" [(ngModel)]="searchData">
+                  <div class="panel-body">
+                      <div class="pull-right">
+                      </div>
+                      <div class="table-resposive">
+                          <table class="table table-filter">
+                              <tbody>
+                                  <tr *ngFor="let todosList of ( todoDetail | myUppercase | filterTodos : searchData ); let i = index">
+                                      <td>
+                                          {{i + 1}}
+                                      </td>
+                                      <td>
+                                      </td>
+                                      <td>
+                                         
+                                              
+                                             
+                                                  {{todosList.firstName}} {{todosList.lastName}} Born on {{todosList.dob | date :'shortDate' }}
+                                              
+
+                                             
+                                         
+                                      </td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+  </div>
+</div>
