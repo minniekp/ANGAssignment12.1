@@ -6,7 +6,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class MyUppercasePipe implements PipeTransform {
 
   transform(value: any, args?: any): any {
-    return value.toUpperCase();
+    return function(input) {
+      return (!!input) ? input.charAt(0).toUpperCase() + input.substr(1).toLowerCase() : '';
+    }
   }
 
 }

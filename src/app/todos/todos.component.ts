@@ -8,7 +8,7 @@ import { Component, OnInit, Input, OnChanges, DoCheck } from '@angular/core';
 })
 export class TodosComponent implements OnInit {
 
- /**Get the cricketerDetail from cricketer-app  */
+ /**Get the todoDetail from todo-app  */
  @Input() todoDetail: ITodoList[];
 
  private searchData: string;
